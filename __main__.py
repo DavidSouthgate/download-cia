@@ -8,7 +8,7 @@ base_url = 'http://nus.cdn.c.shop.nintendowifi.net/ccs/download/'
 
 
 def main():
-    script_directory = os.path.dirname(os.path.abspath(sys.argv[0]))
+    script_directory = os.path.dirname(os.path.abspath(__file__))
     args = parse_args()
     title_base_url = base_url + args.title_id
     output_path = os.path.join(script_directory, 'output', args.title_id)
@@ -65,9 +65,6 @@ def download_bin(url, output_path):
             if chunk:
                 f.write(chunk)
     return response.content
-
-
-
 
 
 if __name__ == "__main__":
