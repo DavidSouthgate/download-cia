@@ -1,0 +1,3 @@
+[submodule "libs/make_cdn_cia"]
+	path = libs/make_cdn_cia
+	url = https://gitlab.com/southgate/gaming/3ds/make_cdn_cia.git
