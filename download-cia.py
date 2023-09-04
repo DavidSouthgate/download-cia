@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import argparse
 import requests
 import os
@@ -11,8 +12,8 @@ def main():
     script_directory = os.path.dirname(os.path.abspath(__file__))
     args = parse_args()
     title_base_url = base_url + args.title_id
-    output_path = os.path.join(script_directory, 'output', args.title_id)
-    output_cia_path = os.path.join(script_directory, 'output', args.title_id + '.cia')
+    output_path = os.path.join(script_directory, 'output', args.title_id + '-' + args.version)
+    output_cia_path = os.path.join(script_directory, 'output', args.title_id + '-' + args.version, args.title_id + '-' + args.version + '.cia')
 
     if os.path.exists(output_path):
         print("Error: {} already exists".format(output_path))
